@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+    <link rel="stylesheet" href="/2.css">
+   
+</head>
+<body>
+     <div id="wrapper">
+        <div id="dialog">
+
+          <h3>Please enter the 4-digit verification code we sent via Email</h3>
+          <div id="form">
+            <div id="inputOfOTP">
+            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" id="1" />
+            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" id="2"/>
+            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" id="3"/>
+            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" id="4"/>
+            <br>
+            </div>
+            <button class="btn btn-primary btn-embossed" onclick="verify()">Verify</button>
+          </div>
+          
+      </div>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+      <script src="/verify.js"></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .header {
+            padding-top: 20px;
+            padding-bottom: 60px
+        }
+        .header-menu {
+            list-style: none;
+            margin-top: 10px;
+        }
+        .header-menu li {
+            float: left;
+            font-size: 15px;
+        }
+        .header-menu a {
+            font-size: 17px;
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            padding: 10px;
+        }
+        .button-view-resume {
+            background-color: #e34216;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            font-size: 14px;
+            float: left;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .button-resume {
+            background-color: #17acda;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            font-size: 14px;
+            float: left;
+            margin-left: 10px;
+            padding: 10px;
+            text-decoration: none;
+        }
+        
+        /*  */
+        
+        
+        
+        
+        .quicksearch, .button-group {
+          margin-bottom: 1em;
+        }
+        
+        .button {
+          margin-right: 0.5em;
+        }
+        
+        .button.is-checked {
+          background-color: blue;
+          color: #fff;
+        }
+        
+        .tile {
+          border: 1px solid black;
+          padding: 1em;
+        }
+        
+        
+        /* a bit more design – can be deleted */
+        /* but this preview shouldn’t look too ugly :) */
+        .quicksearch {
+          width: 30%;
+        }
+        
+        .quicksearch, .button {
+          padding: 0.5rem;
+          font-size: 1rem;
+          color: blue;
+        }
+        
+        .quicksearch, .button, .tile {
+          border: 2px solid blue;
+          border-radius: 10px 5px;
+          background-color: white;
+          box-shadow: 4px 4px 0 blue;
+        }
+        
+        .tile {
+          font-family: sans-serif;
+        }
+        
+        .button.is-checked {
+          transform: translate(4px, 4px);
+          box-shadow: none;
+        }
+        
+        /*  ------------------- */
+        
+        
+    </style>
+</head>
+<body>
+    
+    <h1><div id="nameOfLoggedInUser"></div></h1>
+    <button onclick="backToIndexPage()"> logIn/signUp</button> 
+    <br>
+    <br>
+
+    <header>
+        <div class="width-100">
+          <div class="container header">
+            <div class="width-25">
+              <img src="https://cdn-icons-png.flaticon.com/512/17/17004.png?w=740&t=st=1687792160~exp=1687792760~hmac=67fdff036cb071e19e703e3fd28fbf34941d01b07f1c26ab4efca05e5bb326ff" alt="Profile" height="30px" width="30px" >
+            </div>
+            <div class="width-50">
+              <ul class="header-menu ">
+                <li>
+                  <a href="#">Home </a>
+                </li>
+                <li>
+                  <a href="#">Jobs </a>
+                </li>
+                <li>
+                  <a href="#">Whishlist </a>
+                </li>
+                <li>
+                  <a href="#">Contact Us </a>
+                </li>
+              </ul>
+            </div>
+            <div class="width-25">
+              <a href="#" class="button-view-resume">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i> View Resume</a>
+              <a href="#" class="button-resume">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Download Resume </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <!--  -->
+      
+      <!-- div role "search" with input for free text search -->
+      
+      <div class="search" role="search">
+        
+        <input type="text" name="search" placeholder="Search" class="quicksearch" aria-label="Search">
+        
+      </div>
+      
+      <div class="button-group" data-filter-group="category">
+        
+        <button class="button is-checked" data-filter="all">All Categories</button>
+        
+        <button class="button" data-filter="it">IT Sector</button>
+        <button class="button" data-filter="call">Call Center</button>
+        <button class="button" data-filter="sales">Sales</button>
+        
+      </div>
+      
+      
+      
+      
+      <div class="grid">
+      
+        
+       
+        
+          <div class="tile it call width-50">
+            <div class="recent-job-list">
+              <div class="width-100">
+                <h2 class="name">HTML Designer</h2>
+                <p class="job-company">Dezven Software Solution  </p>
+              </div>
+              <div class="width-33">
+                <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+              </div>
+              <div class="width-33">
+                <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+              </div>
+              <div class="width-33">
+                <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+              </div>
+              <div class="width-100">
+                <p class="job-skill">
+                  <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+                </p>
+              </div>
+              <div class="width-100">
+                <a href="#" class="job-apply-button">Apply Now</a>
+              </div>
+            </div>
+          </div>
+          <!-----JOB LIST------>
+          <div class=" tile call sales width-50">
+            <div class="recent-job-list">
+              <div class="width-100">
+                <h4 class="name">CSS Designer</h4>
+                <p class="job-company">Dezven Group <i class="fa fa-star" aria-hidden="true"></i> | 234 Reviews </p>
+              </div>
+              <div class="width-33">
+                <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+              </div>
+              <div class="width-33">
+                <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+              </div>
+              <div class="width-33">
+                <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+              </div>
+              <div class="width-100">
+                <p class="job-skill">
+                  <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+                </p>
+              </div>
+              <div class="width-100">
+                <a href="#" class="job-apply-button">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class=" tile it sales width-50">
+            <div class="recent-job-list">
+              <div class="width-100">
+                <h2 class="name">Bootstrap Developer</h2>
+                <p class="job-company">Apple Incorporation <i class="fa fa-star" aria-hidden="true"></i> | 234 Reviews </p>
+              </div>
+              <div class="width-33">
+                <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+              </div>
+              <div class="width-33">
+                <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+              </div>
+              <div class="width-33">
+                <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+              </div>
+              <div class="width-100">
+                <p class="job-skill">
+                  <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+                </p>
+              </div>
+              <div class="width-100">
+                <a href="#" class="job-apply-button">Apply Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- ---JOB LIST--- -->
+          <div class=" tile it call sales width-50">
+            <div class="recent-job-list">
+              <div class="width-100">
+                <h4 class="name">Javascript Developer</h4>
+                <p class="job-company">Wipro Software Sol <i class="fa fa-star" aria-hidden="true"></i> | 234 Reviews </p>
+              </div>
+              <div class="width-33">
+                <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+              </div>
+              <div class="width-33">
+                <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+              </div>
+              <div class="width-33">
+                <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+              </div>
+              <div class="width-100">
+                <p class="job-skill">
+                  <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+                </p>
+              </div>
+              <div class="width-100">
+                <a href="#" class="job-apply-button">Apply Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- ---JOB LIST--- -->
+          <div class="tile sales call width-50">
+            <div class="recent-job-list">
+              <div class="width-100">
+                <h4 class="name">Graphic Designer</h4>
+                <p class="job-company">Microsoft Solution INC <i class="fa fa-star" aria-hidden="true"></i> | 234 Reviews </p>
+              </div>
+              <div class="width-33">
+                <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+              </div>
+              <div class="width-33">
+                <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+              </div>
+              <div class="width-33">
+                <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+              </div>
+              <div class="width-100">
+                <p class="job-skill">
+                  <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+                </p>
+              </div>
+              <div class="width-100">
+                <a href="#" class="job-apply-button">Apply Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- ---JOB LIST---- -->
+          <div class="tile sales  width-50">
+            <div class="recent-job-list">
+              <div class="width-100">
+                <h4 class="name">jQuery Developer</h4>
+                <p class="job-company">Google Corporation <i class="fa fa-star" aria-hidden="true"></i> | 234 Reviews </p>
+              </div>
+              <div class="width-33">
+                <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+              </div>
+              <div class="width-33">
+                <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+              </div>
+              <div class="width-33">
+                <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+              </div>
+              <div class="width-100">
+                <p class="job-skill">
+                  <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+                </p>
+              </div>
+              <div class="width-100">
+                <a href="#" class="job-apply-button">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
+        
+      </div>
+      
+</body>
+<script>
+
+    const urlParams = new URLSearchParams(window.location.search);
+   console.log(urlParams)
+   const name = urlParams.get('Name');
+   console.log(name)
+
+   var divData = document.getElementById("nameOfLoggedInUser") 
+   divData.innerText = 'Welcome ' +  name + ' ,' ;
+
+    function  backToIndexPage() {
+        window.location.href = "http://localhost:5500/";
+    }
+
+    
+    
+  // Get the grid element
+  var grid = document.querySelector('.grid');
+
+  // Get all criterion elements
+  var criterionElements = Array.from(grid.querySelectorAll('.tile'));
+
+  // Get the filter buttons
+  var filterButtons = Array.from(document.querySelectorAll('.button-group button'));
+
+  // Get the search input
+  var searchInput = document.querySelector('.quicksearch');
+
+  // Function to filter the criterion elements
+  function filterCriterion() {
+    var selectedFilter = document.querySelector('.button-group .is-checked');
+    var filterValue = selectedFilter ? selectedFilter.getAttribute('data-filter') : 'all';
+
+    criterionElements.forEach(function(element) {
+      var category = element.classList.contains(filterValue);
+      var isVisible = filterValue === 'all' || category;
+      var searchTerm = searchInput.value.toLowerCase();
+      var content = element.textContent.toLowerCase();
+      var matchesSearch = content.includes(searchTerm);
+      element.style.display = isVisible && matchesSearch ? 'block' : 'none';
+    });
+  }
+
+  // Event listener for filter button click
+  filterButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      filterButtons.forEach(function(btn) {
+        btn.classList.remove('is-checked');
+      });
+      button.classList.add('is-checked');
+      filterCriterion();
+    });
+  });
+
+  // Event listener for search input keyup
+  searchInput.addEventListener('keyup', function() {
+    filterCriterion();
+  });
+
+
+</script>
+</html>
